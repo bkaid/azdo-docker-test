@@ -2,8 +2,8 @@ pool:
   vmImage: $(Build.VmImage)
 
 schedules:
-  - cron: "*/30 * * * *"
-    displayName: "Build every 30 minutes"
+  - cron: "0 */1 * * *"
+    displayName: "Build every hour"
     branches:
       include:
       - master
