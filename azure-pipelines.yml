@@ -1,5 +1,5 @@
 pool:
-  vmImage: $(Build.VmImage)
+  vmImage: windows-2019
 
 schedules:
   - cron: "0 */1 * * *"
@@ -10,7 +10,5 @@ schedules:
     always: true
 
 steps:
-- checkout: none
-
-- bash: docker pull $(Build.DockerImage)
-  displayName: docker pull $(Build.DockerImage)
+- bash: docker-compose pull
+  displayName: docker-compose pull
