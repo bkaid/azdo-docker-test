@@ -1,0 +1,16 @@
+pool:
+  vmImage: $(Build.VmImage)
+
+schedules:
+  - cron: "*/30 * * * *"
+    displayName: "Build every 30 minutes"
+    branches:
+      include:
+      - master
+    always: true
+
+steps:
+- checkout: none
+
+- bash: docker pull $(Build.DockerImage)
+  displayName: docker pull $(Build.DockerImage)
