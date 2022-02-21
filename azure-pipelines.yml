@@ -12,3 +12,4 @@ schedules:
 steps:
 - bash: docker-compose pull
   displayName: docker-compose pull
+  timeoutInMinutes: 360

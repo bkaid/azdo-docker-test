@@ -2,9 +2,9 @@ version: "3.7"
 
 services:
   sdk:
-    image: mcr.microsoft.com/dotnet/core/sdk:2.2.401
+    image: mcr.microsoft.com/dotnet/sdk:6.0.200
     entrypoint: echo hello from sdk
 
   aspnet:
-    image: mcr.microsoft.com/dotnet/core/aspnet:2.2.8
+    image: mcr.microsoft.com/dotnet/aspnet:6.0.2
     entrypoint: echo hello from aspnet
